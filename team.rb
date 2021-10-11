@@ -5,47 +5,16 @@ class Team
   attr_accessor :name, :win, :lose, :draw
 
   # 初期化用のメソッド
-    # 初期化用のメソッド
-  def initialize
-     self.name = "Giants"
-     self.win = 67
-     self.lose = 45 
-     self.draw = 8
+  def initialize(name, win, lose, draw)
+     self.name = name
+     self.win = win
+     self.lose = lose
+     self.draw = draw
   end
-  def initialize
-    self.name = "Tigers"
-    self.win = 60
-    self.lose = 53
-    self.draw = 7
-end
-def initialize
-    self.name = "Dragons"
-    self.win = 60
-    self.lose = 55
-    self.draw = 5
-end
-def initialize
-    self.name = "BayStars" 
-    self.win = 56
-    self.lose = 58
-    self.draw = 6
-end
-def initialize
-    self.name = "Carp"
-    self.win = 52
-    self.lose = 56
-    self.draw = 12
-end
-def initialize
-    self.name = "Swallows"
-    self.win = 41
-    self.lose = 69
-    self.draw = 10
-end
 
   # 勝率用のメソッド
   def calc_win_rate
-    return self.win / (self.win + self.lose) 
+    return self.win.to_f / (self.win + self.lose) 
   end
   
   # show_team_result
@@ -54,16 +23,16 @@ end
   end
 end
 
-giants = Team.new
-tigers = Team.new
-dragons = Team.new
-baystars = Team.new
-carp = Team.new
-swallows = Team.new
+Giants = Team.new('Giants',67,45,8)
+Tigers = Team.new('Tigers',60,53,7)
+Dragons = Team.new('Dragons',60,55,5)
+Baystars = Team.new('Baystars',56,58,6)
+Carp = Team.new('Carp',52,56,12)
+Swallows = Team.new('Swallows',41,69,10)
 
-giants.show_team_result
-tigers.show_team_result
-dragons.show_team_result
-baystars.show_team_result
-carp.show_team_result
-swallows.show_team_result
+Giants.show_team_result
+Tigers.show_team_result
+Dragons.show_team_result
+Baystars.show_team_result
+Carp.show_team_result
+Swallows.show_team_result
